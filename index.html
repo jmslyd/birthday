@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday Ayana</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<audio id="birthday-music" src="birthday.mp3" preload="auto" loop></audio>
+<audio id="season-music" src="season.mp3" preload="auto" loop></audio>
+
+<div class="speaker-icon" id="mute-toggle" title="Toggle Music" role="button" aria-pressed="false" tabindex="0">
+  <img id="speaker-img" src="https://cdn-icons-png.flaticon.com/512/727/727240.png" alt="speaker" />
+</div>
+
+<div class="container">
+  <section class="welcome-screen visible" aria-label="Welcome screen">
+    <h1>Happy Birthday, Ayana 🌸</h1>
+    <div class="button-wrapper">
+      <button id="start-btn" aria-label="Start birthday greeting">Tap to Begin</button>
+      <div class="korumi-decoration"></div>
+    </div>
+  </section>
+
+  <section class="typing-screen" aria-live="polite" aria-label="Birthday messages">
+    <div id="typing-text" role="textbox" aria-readonly="true"></div>
+    <div class="button-wrapper">
+      <button id="next-btn" style="display:none;" aria-label="Next message">Click for Another Surprise 💫</button>
+    </div>
+    <div class="korumi-decoration"></div>
+  </section>
+
+  <section class="sticky-wall" aria-label="Letters and Poems wall">
+    <h2>Letters & Poems</h2>
+    <div class="wall-board" id="wall-board"></div>
+  </section>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="poem-view" id="poem-view" role="dialog" aria-modal="true" aria-labelledby="poem-title" tabindex="-1">
+    <div class="poem-title" id="poem-title"></div>
+    <div class="poem-content" id="poem-content"></div>
+    <button class="back-button" id="back-to-wall" aria-label="Back to letters and poems wall">Back to Wall</button>
+  </div>
+
+  <footer>Made with love by Lloyd 💌</footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
